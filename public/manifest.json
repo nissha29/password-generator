@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Password Generator",
+    "version": "1.0.0",
+    "description": "A Chrome extension to generate strong passwords",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon" : "./pass-G.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "permissions": ["activeTab"]
+  }
+  
